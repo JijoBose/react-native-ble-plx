@@ -7,12 +7,7 @@
 //
 
 #import "BleClient.h"
-
-#ifdef REACT_NATIVE_BLE_PLX_SWIFT
-@import react_native_ble_plx_swift;
-#else
-#import "BleClient-Swift.h"
-#endif
+@import MultiplatformBleAdapter;
 
 @interface BleModule () <BleClientManagerDelegate>
 @property(nonatomic) BleClientManager* manager;
@@ -58,8 +53,8 @@ RCT_EXPORT_MODULE(BleClientManager);
 }
 
 RCT_EXPORT_METHOD(createClient:(NSString*)restoreIdentifierKey) {
-    _manager = [[BleClientManager alloc] initWithQueue:self.methodQueue
-                                  restoreIdentifierKey:restoreIdentifierKey];
+    _manager = [BleAdapterFactory getNewAdapterWithQueue:self.methodQueue
+                                    restoreIdentifierKey:restoreIdentifierKey];
     _manager.delegate = self;
 }
 

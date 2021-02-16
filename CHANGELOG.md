@@ -1,3 +1,27 @@
+**2.0.2**
+- Updated MultiplatformBleAdapter to version 0.1.7.
+- Added support for BleMulator
+- Removed destroying of client upon catalystInstanceDestroy. 
+- Updated CI to RN 0.63.3
+
+**2.0.1**
+
+- Fixed `onDisconnected()` callback on Android
+- Fixed possibility of wrong characteristics being used on Android if they shared the same UUID
+
+**2.0.0**
+
+- Update direct dependency to Multiplatform Ble Adapter
+- Remove support for RN version < 0.60
+- Fixed Typescript `callbackType` type definition.
+
+**1.1.1**
+
+- Update development dependencies
+- Add more information to the README and INTRO file.
+- Remove `const` from enum types in the typescript definition file.
+- Add backpressure buffer for notifications.
+
 **1.1.0**
 
 - Add support for descriptors.

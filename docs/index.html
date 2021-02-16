@@ -1,8 +1,8 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset='utf-8'>
-  <title>react-native-ble-plx 1.1.0 | Documentation</title>
+  <title>react-native-ble-plx 2.0.2 | Documentation</title>
   <meta name='description' content='React Native Bluetooth Low Energy library'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,11 +15,14 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>react-native-ble-plx</h3>
-          <div class='mb1'><code>1.1.0</code></div>
+          <div class='mb1'><code>2.0.2</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
             class='col12 block input'
+            spellcheck='false'
+            autocapitalize='off'
+            autocorrect='off'
             type='text' />
           <div id='toc'>
             <ul class='list-reset h5 py1-ul'>
@@ -2018,8 +2021,10 @@ capabilities. For example connection may look like this:</p>
     .catch(<span class="hljs-function">(<span class="hljs-params">error</span>) =&gt;</span> {
         <span class="hljs-comment">// Handle errors</span>
     });</pre>
-<p>Discovery of services and characteristics is required to be executed only once. Additionally
-it can be a long process depending on number of characteristics and services available.</p>
+<p>Discovery of services and characteristics is required to be executed once per connection*.
+It can be a long process depending on number of characteristics and services available.</p>
+<p>* Extremely rarely, when peripheral's service/characteristic set can change during a connection
+an additional service discovery may be needed.</p>
 <h2>Read, write and monitor values</h2>
 <p>After successful discovery of services you can call </p>
 <ul>
@@ -2102,6 +2107,8 @@ are presented in order which aligns them with usage.</p>
   
 
   
+
+  
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
@@ -2142,6 +2149,8 @@ this library. All operations which were in progress completes with
   
   
   
+  
+
   
 
   
@@ -2222,6 +2231,8 @@ this library. All operations which were in progress completes with
   
 
   
+
+  
 </section>
 
       </div>
@@ -2264,6 +2275,8 @@ this library. All operations which were in progress completes with
 
       
     
+  
+
   
 
   
@@ -2326,6 +2339,8 @@ which doesn't exist is ignored.</p>
         </div>
       
     </div>
+  
+
   
 
   
@@ -2428,6 +2443,8 @@ setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;
   
 
   
+
+  
 </section>
 
       </div>
@@ -2497,6 +2514,8 @@ setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;
   
 
   
+
+  
 </section>
 
       </div>
@@ -2540,6 +2559,8 @@ is "PoweredOn".</p>
 
       
     
+  
+
   
 
   
@@ -2624,6 +2645,8 @@ Look at
 
       
     
+  
+
   
 
   
@@ -2749,6 +2772,8 @@ is a scanned
   
 
   
+
+  
 </section>
 
       </div>
@@ -2777,6 +2802,8 @@ is a scanned
   
   
   
+  
+
   
 
   
@@ -2884,6 +2911,8 @@ above.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -2949,6 +2978,8 @@ above.</p>
 
       
     
+  
+
   
 
   
@@ -3050,6 +3081,8 @@ on iOS platform as MTU exchange is done automatically.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -3106,6 +3139,8 @@ on iOS platform as MTU exchange is done automatically.</p>
 
       
     
+  
+
   
 
   
@@ -3177,6 +3212,8 @@ if that's the case with function <a href="#blemanagerisdeviceconnected">isDevice
 
       
     
+  
+
   
 
   
@@ -3271,6 +3308,8 @@ if that's the case with function <a href="#blemanagerisdeviceconnected">isDevice
   
 
   
+
+  
 </section>
 
       </div>
@@ -3330,6 +3369,8 @@ if that's the case with function <a href="#blemanagerisdeviceconnected">isDevice
 
       
     
+  
+
   
 
   
@@ -3430,6 +3471,8 @@ if available and
   
 
   
+
+  
 </section>
 
       </div>
@@ -3491,6 +3534,8 @@ if available and
 
       
     
+  
+
   
 
   
@@ -3586,6 +3631,8 @@ characteristics have been discovered.
   
 
   
+
+  
 </section>
 
       </div>
@@ -3648,6 +3695,8 @@ characteristics have been discovered.
 
       
     
+  
+
   
 
   
@@ -3735,6 +3784,8 @@ discovered for a
 
       
     
+  
+
   
 
   
@@ -3847,6 +3898,8 @@ discovered for a
   
 
   
+
+  
 </section>
 
       </div>
@@ -3943,6 +3996,8 @@ UUID paths. Latest value of
 
       
     
+  
+
   
 
   
@@ -4072,6 +4127,8 @@ UUID paths. Latest value of characteristic may not be stored inside returned obj
   
 
   
+
+  
 </section>
 
       </div>
@@ -4175,6 +4232,8 @@ UUID paths. Latest value of characteristic may not be stored inside returned obj
 
       
     
+  
+
   
 
   
@@ -4307,6 +4366,8 @@ in favour of indications.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -4413,6 +4474,8 @@ UUID paths. Latest value of
 
       
     
+  
+
   
 
   
@@ -4540,6 +4603,8 @@ UUID paths. Latest value of
   
 
   
+
+  
 </section>
 
       </div>
@@ -4621,6 +4686,8 @@ UUID paths. Latest value of
   
 
   
+
+  
     <div class='py1 quiet mt1 prose-big'>Instance Members</div>
     <div class="clearfix">
   
@@ -4652,6 +4719,8 @@ UUID paths. Latest value of
   
   
   
+  
+
   
 
   
@@ -4723,6 +4792,8 @@ UUID paths. Latest value of
   
 
   
+
+  
 </section>
 
       </div>
@@ -4756,6 +4827,8 @@ UUID paths. Latest value of
   
   
   
+  
+
   
 
   
@@ -4828,6 +4901,8 @@ default value of 23 is used.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -4861,6 +4936,8 @@ default value of 23 is used.</p>
   
   
   
+  
+
   
 
   
@@ -4932,6 +5009,8 @@ default value of 23 is used.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -4965,6 +5044,8 @@ default value of 23 is used.</p>
   
   
   
+  
+
   
 
   
@@ -5036,6 +5117,8 @@ default value of 23 is used.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -5069,6 +5152,8 @@ default value of 23 is used.</p>
   
   
   
+  
+
   
 
   
@@ -5140,6 +5225,8 @@ default value of 23 is used.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -5192,6 +5279,8 @@ default value of 23 is used.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -5225,6 +5314,8 @@ default value of 23 is used.</p>
   
   
   
+  
+
   
 
   
@@ -5322,6 +5413,8 @@ default value of 23 is used.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -5378,6 +5471,8 @@ default value of 23 is used.</p>
 
       
     
+  
+
   
 
   
@@ -5468,6 +5563,8 @@ default value of 23 is used.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -5539,6 +5636,8 @@ default value of 23 is used.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -5583,6 +5682,8 @@ default value of 23 is used.</p>
 
       
     
+  
+
   
 
   
@@ -5642,6 +5743,8 @@ default value of 23 is used.</p>
 
       
     
+  
+
   
 
   
@@ -5732,6 +5835,8 @@ if available and
   
 
   
+
+  
 </section>
 
       </div>
@@ -5804,6 +5909,8 @@ characteristics have been discovered.
   
 
   
+
+  
 </section>
 
       </div>
@@ -5849,6 +5956,8 @@ device.
 
       
     
+  
+
   
 
   
@@ -5939,6 +6048,8 @@ discovered for a
   
 
   
+
+  
 </section>
 
       </div>
@@ -6011,6 +6122,8 @@ discovered for this
 
       
     
+  
+
   
 
   
@@ -6110,6 +6223,8 @@ UUID paths. Latest value of
 
       
     
+  
+
   
 
   
@@ -6229,6 +6344,8 @@ UUID paths. Latest value of characteristic may not be stored inside returned obj
   
 
   
+
+  
 </section>
 
       </div>
@@ -6322,6 +6439,8 @@ UUID paths. Latest value of characteristic may not be stored inside returned obj
 
       
     
+  
+
   
 
   
@@ -6430,6 +6549,8 @@ UUID paths. Latest value of characteristic may not be stored inside returned obj
 
       
     
+  
+
   
 
   
@@ -6552,6 +6673,8 @@ UUID paths. Latest value of
   
 
   
+
+  
 </section>
 
       </div>
@@ -6658,6 +6781,8 @@ UUID paths. Latest value of
   
 
   
+
+  
 </section>
 
       </div>
@@ -6737,6 +6862,8 @@ UUID paths. Latest value of
   
 
   
+
+  
     <div class='py1 quiet mt1 prose-big'>Instance Members</div>
     <div class="clearfix">
   
@@ -6768,6 +6895,8 @@ UUID paths. Latest value of
   
   
   
+  
+
   
 
   
@@ -6839,6 +6968,8 @@ UUID paths. Latest value of
   
 
   
+
+  
 </section>
 
       </div>
@@ -6872,6 +7003,8 @@ UUID paths. Latest value of
   
   
   
+  
+
   
 
   
@@ -6943,6 +7076,8 @@ UUID paths. Latest value of
   
 
   
+
+  
 </section>
 
       </div>
@@ -6988,6 +7123,8 @@ discovered for this service.
 
       
     
+  
+
   
 
   
@@ -7078,6 +7215,8 @@ discovered for this
   
 
   
+
+  
 </section>
 
       </div>
@@ -7154,6 +7293,8 @@ UUID path. Latest value of
 
       
     
+  
+
   
 
   
@@ -7263,6 +7404,8 @@ UUID path. Latest value of characteristic may not be stored inside returned obje
   
 
   
+
+  
 </section>
 
       </div>
@@ -7346,6 +7489,8 @@ UUID path. Latest value of characteristic may not be stored inside returned obje
 
       
     
+  
+
   
 
   
@@ -7444,6 +7589,8 @@ UUID path. Latest value of characteristic may not be stored inside returned obje
 
       
     
+  
+
   
 
   
@@ -7556,6 +7703,8 @@ UUID paths. Latest value of
   
 
   
+
+  
 </section>
 
       </div>
@@ -7652,6 +7801,8 @@ UUID paths. Latest value of
   
 
   
+
+  
 </section>
 
       </div>
@@ -7731,6 +7882,8 @@ UUID paths. Latest value of
   
 
   
+
+  
     <div class='py1 quiet mt1 prose-big'>Instance Members</div>
     <div class="clearfix">
   
@@ -7762,6 +7915,8 @@ UUID paths. Latest value of
   
   
   
+  
+
   
 
   
@@ -7833,6 +7988,8 @@ UUID paths. Latest value of
   
 
   
+
+  
 </section>
 
       </div>
@@ -7866,6 +8023,8 @@ UUID paths. Latest value of
   
   
   
+  
+
   
 
   
@@ -7937,6 +8096,8 @@ UUID paths. Latest value of
   
 
   
+
+  
 </section>
 
       </div>
@@ -7970,6 +8131,8 @@ UUID paths. Latest value of
   
   
   
+  
+
   
 
   
@@ -8041,6 +8204,8 @@ UUID paths. Latest value of
   
 
   
+
+  
 </section>
 
       </div>
@@ -8074,6 +8239,8 @@ UUID paths. Latest value of
   
   
   
+  
+
   
 
   
@@ -8145,6 +8312,8 @@ UUID paths. Latest value of
   
 
   
+
+  
 </section>
 
       </div>
@@ -8178,6 +8347,8 @@ UUID paths. Latest value of
   
   
   
+  
+
   
 
   
@@ -8249,6 +8420,8 @@ UUID paths. Latest value of
   
 
   
+
+  
 </section>
 
       </div>
@@ -8301,6 +8474,8 @@ UUID paths. Latest value of
   
 
   
+
+  
 </section>
 
       </div>
@@ -8334,6 +8509,8 @@ UUID paths. Latest value of
   
   
   
+  
+
   
 
   
@@ -8413,6 +8590,8 @@ discovered for this
   
 
   
+
+  
 </section>
 
       </div>
@@ -8477,6 +8656,8 @@ inside returned object.
 
       
     
+  
+
   
 
   
@@ -8576,6 +8757,8 @@ not be stored inside returned object.
   
 
   
+
+  
 </section>
 
       </div>
@@ -8649,6 +8832,8 @@ not be stored inside returned object.
 
       
     
+  
+
   
 
   
@@ -8737,6 +8922,8 @@ this
 
       
     
+  
+
   
 
   
@@ -8839,6 +9026,8 @@ UUID paths. Latest value of
   
 
   
+
+  
 </section>
 
       </div>
@@ -8913,6 +9102,8 @@ UUID paths. Latest value of
 
       
     
+  
+
   
 
   
@@ -9005,6 +9196,8 @@ UUID paths. Latest value of
   
 
   
+
+  
     <div class='py1 quiet mt1 prose-big'>Instance Members</div>
     <div class="clearfix">
   
@@ -9036,6 +9229,8 @@ UUID paths. Latest value of
   
   
   
+  
+
   
 
   
@@ -9107,6 +9302,8 @@ UUID paths. Latest value of
   
 
   
+
+  
 </section>
 
       </div>
@@ -9140,6 +9337,8 @@ UUID paths. Latest value of
   
   
   
+  
+
   
 
   
@@ -9211,6 +9410,8 @@ UUID paths. Latest value of
   
 
   
+
+  
 </section>
 
       </div>
@@ -9244,6 +9445,8 @@ UUID paths. Latest value of
   
   
   
+  
+
   
 
   
@@ -9315,6 +9518,8 @@ UUID paths. Latest value of
   
 
   
+
+  
 </section>
 
       </div>
@@ -9367,6 +9572,8 @@ UUID paths. Latest value of
   
 
   
+
+  
 </section>
 
       </div>
@@ -9400,6 +9607,8 @@ UUID paths. Latest value of
   
   
   
+  
+
   
 
   
@@ -9498,6 +9707,8 @@ UUID paths. Latest value of
   
 
   
+
+  
 </section>
 
       </div>
@@ -9563,6 +9774,8 @@ UUID paths. Latest value of
 
       
     
+  
+
   
 
   
@@ -9672,6 +9885,8 @@ UUID paths. Latest value of
   
 
   
+
+  
 </section>
 
           
@@ -9760,6 +9975,8 @@ platform independent way.</p>
   
 
   
+
+  
     <div class='py1 quiet mt1 prose-big'>Instance Members</div>
     <div class="clearfix">
   
@@ -9791,6 +10008,8 @@ platform independent way.</p>
   
   
   
+  
+
   
 
   
@@ -9862,6 +10081,8 @@ platform independent way.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -9895,6 +10116,8 @@ platform independent way.</p>
   
   
   
+  
+
   
 
   
@@ -9966,6 +10189,8 @@ platform independent way.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -9999,6 +10224,8 @@ platform independent way.</p>
   
   
   
+  
+
   
 
   
@@ -10072,6 +10299,8 @@ platform independent way.</p>
   
 
   
+
+  
     <div class='py1 quiet mt1 prose-big'>Static Members</div>
     <div class="clearfix">
   
@@ -10099,6 +10328,8 @@ Original message is available in <a href="#bleerrorreason">reason</a> property.<
   
   
   
+  
+
   
 
   
@@ -10166,6 +10397,8 @@ Original message is available in <a href="#bleerrorreason">reason</a> property.<
   
 
   
+
+  
 </section>
 
       </div>
@@ -10195,6 +10428,8 @@ function call.</p>
   
   
   
+  
+
   
 
   
@@ -10261,6 +10496,8 @@ function call.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -10289,6 +10526,8 @@ function call.</p>
   
   
   
+  
+
   
 
   
@@ -10355,6 +10594,8 @@ function call.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -10383,6 +10624,8 @@ function call.</p>
   
   
   
+  
+
   
 
   
@@ -10450,6 +10693,8 @@ android.permission.ACCESS_COARSE_LOCATION permission or android.permission.ACCES
   
 
   
+
+  
 </section>
 
       </div>
@@ -10478,6 +10723,8 @@ android.permission.ACCESS_COARSE_LOCATION permission or android.permission.ACCES
   
   
   
+  
+
   
 
   
@@ -10544,6 +10791,8 @@ android.permission.ACCESS_COARSE_LOCATION permission or android.permission.ACCES
   
 
   
+
+  
 </section>
 
       </div>
@@ -10572,6 +10821,8 @@ android.permission.ACCESS_COARSE_LOCATION permission or android.permission.ACCES
   
   
   
+  
+
   
 
   
@@ -10638,6 +10889,8 @@ android.permission.ACCESS_COARSE_LOCATION permission or android.permission.ACCES
   
 
   
+
+  
 </section>
 
       </div>
@@ -10666,6 +10919,8 @@ android.permission.ACCESS_COARSE_LOCATION permission or android.permission.ACCES
   
   
   
+  
+
   
 
   
@@ -10732,6 +10987,8 @@ android.permission.ACCESS_COARSE_LOCATION permission or android.permission.ACCES
   
 
   
+
+  
 </section>
 
       </div>
@@ -10760,6 +11017,8 @@ android.permission.ACCESS_COARSE_LOCATION permission or android.permission.ACCES
   
   
   
+  
+
   
 
   
@@ -10826,6 +11085,8 @@ android.permission.ACCESS_COARSE_LOCATION permission or android.permission.ACCES
   
 
   
+
+  
 </section>
 
       </div>
@@ -10854,6 +11115,8 @@ android.permission.ACCESS_COARSE_LOCATION permission or android.permission.ACCES
   
   
   
+  
+
   
 
   
@@ -10920,6 +11183,8 @@ android.permission.ACCESS_COARSE_LOCATION permission or android.permission.ACCES
   
 
   
+
+  
 </section>
 
       </div>
@@ -10948,6 +11213,8 @@ android.permission.ACCESS_COARSE_LOCATION permission or android.permission.ACCES
   
   
   
+  
+
   
 
   
@@ -11014,6 +11281,8 @@ android.permission.ACCESS_COARSE_LOCATION permission or android.permission.ACCES
   
 
   
+
+  
 </section>
 
       </div>
@@ -11042,6 +11311,8 @@ android.permission.ACCESS_COARSE_LOCATION permission or android.permission.ACCES
   
   
   
+  
+
   
 
   
@@ -11110,6 +11381,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -11159,6 +11432,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -11187,6 +11462,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -11255,6 +11532,8 @@ or <a href="#characteristiciswritablewithoutresponse">characteristic.isWritableW
   
 
   
+
+  
 </section>
 
       </div>
@@ -11284,6 +11563,8 @@ or <a href="#characteristiciswritablewithoutresponse">characteristic.isWritableW
   
   
   
+  
+
   
 
   
@@ -11352,6 +11633,8 @@ or <a href="#characteristiciswritablewithoutresponse">characteristic.isWritableW
   
 
   
+
+  
 </section>
 
       </div>
@@ -11382,6 +11665,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -11450,6 +11735,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -11478,6 +11765,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -11544,6 +11833,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -11572,6 +11863,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -11638,6 +11931,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -11666,6 +11961,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -11732,6 +12029,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -11760,6 +12059,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -11826,6 +12127,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -11873,6 +12176,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -11901,6 +12206,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -11982,6 +12289,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
           
@@ -12024,6 +12333,8 @@ to cache them.</p>
   
 
   
+
+  
     <div class='py1 quiet mt1 prose-big'>Static Members</div>
     <div class="clearfix">
   
@@ -12050,6 +12361,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -12116,6 +12429,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -12144,6 +12459,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -12210,6 +12527,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -12238,6 +12557,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -12304,6 +12625,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -12332,6 +12655,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -12398,6 +12723,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -12426,6 +12753,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -12492,6 +12821,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -12520,6 +12851,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -12586,6 +12919,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -12614,6 +12949,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -12680,6 +13017,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -12708,6 +13047,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -12774,6 +13115,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -12821,6 +13164,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -12849,6 +13194,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -12924,6 +13271,8 @@ to cache them.</p>
   
 
   
+
+  
     <div class='py1 quiet mt1 prose-big'>Static Members</div>
     <div class="clearfix">
   
@@ -12950,6 +13299,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -13016,6 +13367,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -13044,6 +13397,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -13110,6 +13465,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -13138,6 +13495,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -13204,6 +13563,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -13232,6 +13593,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -13298,6 +13661,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -13326,6 +13691,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -13392,6 +13759,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -13420,6 +13789,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -13486,6 +13857,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -13514,6 +13887,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -13580,6 +13955,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -13627,6 +14004,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -13655,6 +14034,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -13730,6 +14111,8 @@ to cache them.</p>
   
 
   
+
+  
     <div class='py1 quiet mt1 prose-big'>Static Members</div>
     <div class="clearfix">
   
@@ -13756,6 +14139,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -13822,6 +14207,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -13850,6 +14237,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -13916,6 +14305,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -13944,6 +14335,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -14010,6 +14403,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -14038,6 +14433,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -14104,6 +14501,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -14132,6 +14531,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -14198,6 +14599,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -14226,6 +14629,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -14292,6 +14697,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -14320,6 +14727,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -14409,6 +14818,8 @@ to cache them.</p>
   
 
   
+
+  
     <div class='py1 quiet mt1 prose-big'>Static Members</div>
     <div class="clearfix">
   
@@ -14435,6 +14846,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -14501,6 +14914,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -14529,6 +14944,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -14595,6 +15012,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -14642,6 +15061,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -14670,6 +15091,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -14745,6 +15168,8 @@ to cache them.</p>
   
 
   
+
+  
     <div class='py1 quiet mt1 prose-big'>Static Members</div>
     <div class="clearfix">
   
@@ -14771,6 +15196,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -14837,6 +15264,8 @@ to cache them.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -14865,6 +15294,8 @@ to cache them.</p>
   
   
   
+  
+
   
 
   
@@ -14941,6 +15372,8 @@ received by <a href="#blemanager">BleManager</a></p>
   
 
   
+
+  
     <div class='py1 quiet mt1 prose-big'>Static Members</div>
     <div class="clearfix">
   
@@ -14967,6 +15400,8 @@ received by <a href="#blemanager">BleManager</a></p>
   
   
   
+  
+
   
 
   
@@ -15033,6 +15468,8 @@ received by <a href="#blemanager">BleManager</a></p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -15061,6 +15498,8 @@ received by <a href="#blemanager">BleManager</a></p>
   
   
   
+  
+
   
 
   
@@ -15127,6 +15566,8 @@ received by <a href="#blemanager">BleManager</a></p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -15155,6 +15596,8 @@ received by <a href="#blemanager">BleManager</a></p>
   
   
   
+  
+
   
 
   
@@ -15221,6 +15664,8 @@ received by <a href="#blemanager">BleManager</a></p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -15257,11 +15702,6 @@ received by <a href="#blemanager">BleManager</a></p>
 
     <div class='pre p1 fill-light mt0'>BleErrorCodeMessageMapping</div>
   
-    <p>
-      Type:
-      {}
-    </p>
-  
   
 
   
@@ -15269,6 +15709,8 @@ received by <a href="#blemanager">BleManager</a></p>
   
   
   
+  
+
   
 
   
@@ -15332,6 +15774,8 @@ received by <a href="#blemanager">BleManager</a></p>
   
 
   
+
+  
     <div class='py1 quiet mt1 prose-big'>Instance Members</div>
     <div class="clearfix">
   
@@ -15363,6 +15807,8 @@ received by <a href="#blemanager">BleManager</a></p>
   
   
   
+  
+
   
 
   
@@ -15456,6 +15902,8 @@ connected peripherals.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -15492,6 +15940,8 @@ and overwrite values of interest to you.</p>
   
   
   
+  
+
   
 
   
@@ -15567,6 +16017,8 @@ and overwrite values of interest to you.</p>
   
 
   
+
+  
     <div class='py1 quiet mt1 prose-big'>Instance Members</div>
     <div class="clearfix">
   
@@ -15598,6 +16050,8 @@ and overwrite values of interest to you.</p>
   
   
   
+  
+
   
 
   
@@ -15673,6 +16127,8 @@ and overwrite values of interest to you.</p>
   
 
   
+
+  
     <div class='py1 quiet mt1 prose-big'>Instance Members</div>
     <div class="clearfix">
   
@@ -15704,6 +16160,8 @@ and overwrite values of interest to you.</p>
   
   
   
+  
+
   
 
   
@@ -15775,6 +16233,8 @@ and overwrite values of interest to you.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -15808,6 +16268,8 @@ and overwrite values of interest to you.</p>
   
   
   
+  
+
   
 
   
@@ -15881,6 +16343,8 @@ and overwrite values of interest to you.</p>
   
 
   
+
+  
     <div class='py1 quiet mt1 prose-big'>Static Members</div>
     <div class="clearfix">
   
@@ -15908,6 +16372,8 @@ If no filter is active, all advertisement packets are reported. [default value]<
   
   
   
+  
+
   
 
   
@@ -15975,6 +16441,8 @@ the filter criteria.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -16004,6 +16472,8 @@ previously reported by a first match callback.</p>
   
   
   
+  
+
   
 
   
@@ -16079,6 +16549,8 @@ previously reported by a first match callback.</p>
   
 
   
+
+  
     <div class='py1 quiet mt1 prose-big'>Static Members</div>
     <div class="clearfix">
   
@@ -16106,6 +16578,8 @@ other scan results without starting BLE scans themselves.</p>
   
   
   
+  
+
   
 
   
@@ -16173,6 +16647,8 @@ least power. [default value]</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -16221,6 +16697,8 @@ provides a good trade-off between scan frequency and power consumption.</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -16250,6 +16728,8 @@ running in the foreground.</p>
   
   
   
+  
+
   
 
   
@@ -16327,6 +16807,8 @@ running in the foreground.</p>
   
 
   
+
+  
     <div class='py1 quiet mt1 prose-big'>Instance Members</div>
     <div class="clearfix">
   
@@ -16359,6 +16841,8 @@ becomes available (true). [Android only]</p>
   
   
   
+  
+
   
 
   
@@ -16411,6 +16895,8 @@ becomes available (true). [Android only]</p>
   
   
   
+  
+
   
 
   
@@ -16484,6 +16970,8 @@ updated and it's services/characteristics were added/removed/altered. [Android o
   
 
   
+
+  
 </section>
 
       </div>
@@ -16519,6 +17007,8 @@ specified due to OS specific behavior.</p>
   
   
   
+  
+
   
 
   
@@ -16603,6 +17093,8 @@ specified due to OS specific behavior.</p>
   
 
   
+
+  
 </section>
 
           
@@ -16637,6 +17129,8 @@ specified due to OS specific behavior.</p>
   
   
   
+  
+
   
 
   
@@ -16709,6 +17203,8 @@ specified due to OS specific behavior.</p>
   
 
   
+
+  
 </section>
 
           
@@ -16762,6 +17258,8 @@ specified due to OS specific behavior.</p>
   
 
   
+
+  
 </section>
 
           
@@ -16791,6 +17289,8 @@ specified due to OS specific behavior.</p>
   
   
   
+  
+
   
 
   
@@ -16863,6 +17363,8 @@ specified due to OS specific behavior.</p>
   
 
   
+
+  
 </section>
 
           
@@ -16897,6 +17399,8 @@ specified due to OS specific behavior.</p>
   
   
   
+  
+
   
 
   
